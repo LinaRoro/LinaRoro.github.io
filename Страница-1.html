@@ -16,8 +16,22 @@
     }(window, document, 'acDataLayer', 'ATM-9nvVFwG73nutmCCtV'));
 </script>
 <script src="https://pxl.demovm.dev.altkraft.com/ak_container.js?id=M3wxNA==" ></script>
-    
-    
+      <button id="init_sub">Подписаться на уведомления</button> 
+
+<script>
+	document.getElementById('init_sub').addEventListener('click', function() { 
+	try {
+		var akPush = new AKPush();
+		akPush.initSubscription(
+	{           
+		db: [14]                 
+	} 
+)  
+		}
+	catch (e) {
+		console.log(e);		}
+	});
+</script>        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content="">
@@ -42,22 +56,6 @@
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-header" id="sec-68b4"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <button id="init_sub">Подписаться на уведомления</button> 
-
-<script>
-	document.getElementById('init_sub').addEventListener('click', function() { 
-	try {
-		var akPush = new AKPush();
-		akPush.initSubscription(
-	{           
-		db: [14]                 
-	} 
-)  
-		}
-	catch (e) {
-		console.log(e);		}
-	});
-</script>
 	  <a href="#" class="u-image u-logo u-image-1">
           <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
         </a>
