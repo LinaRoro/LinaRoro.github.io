@@ -19,7 +19,21 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Страница 1</title>
-
+<script>
+    (function (window, document, dataLayerName, containerID) {
+        window[dataLayerName] = window[dataLayerName] || [];
+        window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+        var firstScript = document.getElementsByTagName('script')[0];
+        var script = document.createElement('script');
+        var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+        script.async = true;
+        script.src = 'https://pxl.demo.altcraft.com/actm/js/actm.js?id=' + containerID + dl;
+        script.type = 'module';
+        if (firstScript && firstScript.parentNode) {
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    }(window, document, 'acDataLayer', 'ATM-pBYpgzV5Qx9szQ3g'));
+</script>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Страница-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
