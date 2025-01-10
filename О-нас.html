@@ -32,16 +32,16 @@
 <script>
   document.getElementById("buy-btn").addEventListener("click", function() {
       ak_pixel_push(
-        "purchase",      
-        100,             
+        "import",      
+        1,             
         {
             db_id: 4,
-            email: "test@example.com",
+            email: "",
         },
         {
-          _fname: "John",
-          _lname: "Doe",
-          email: "test@example.com", 
+          _fname: "",
+          _lname: "",
+          email: "", 
         }
       );
   });
