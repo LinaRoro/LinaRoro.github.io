@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Урок 9. Размещение пикселя на сайте через Менеджер тегов</title>
+    <title>Learning pixel</title>
+    
      <script>
     (function (window, document, dataLayerName, containerID) {
         window[dataLayerName] = window[dataLayerName] || [];
@@ -20,10 +22,31 @@
     }(window, document, 'acDataLayer', 'ATM-pBYpgzV5Qx9szQ3g'));
 </script>  
 </head>
+
 <body>
-    <p>Страница 1</p>
-    <button id="btn_1">Кнопка 1</button>
+
+     <button id="buy-btn">Купить</button>
+     <button id="btn_1">Кнопка 1</button>
     <button id="btn_2">Кнопка 2</button>
 
+<script>
+  document.getElementById("buy-btn").addEventListener("click", function() {
+      ak_pixel_push(
+        "purchase",      
+        100,             
+        {
+            db_id: 4,
+            email: "test@example.com",
+        },
+        {
+          _fname: "John",
+          _lname: "Doe",
+          email: "test@example.com", 
+        }
+      );
+  });
+</script>
+
 </body>
+
 </html>
